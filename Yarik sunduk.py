@@ -186,6 +186,7 @@ class EventHandlers:
                 return
 
             post_author_id = await VKHelper.get_post_author(owner_id, post_id)
+            logger.debug(f"Автор поста для {owner_id}_{post_id}: {post_author_id}")
 
             message_parts: List[str] = [
                 "❤️ Новый Лайк! 💕",
@@ -235,6 +236,7 @@ class EventHandlers:
                 return
 
             post_author_id = await VKHelper.get_post_author(owner_id, post_id)
+            logger.debug(f"Автор поста для {owner_id}_{post_id}: {post_author_id}")
 
             message_parts: List[str] = [
                 "❌ Лайк удален! 💔",
